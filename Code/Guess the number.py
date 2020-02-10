@@ -1,8 +1,8 @@
 import random
   
 # Allowing user to choose the max limit of the random function
-a = 1
-b = int(input("Enter max limit: "))
+a = int(input("Enter min. limit: "))
+b = int(input("Enter max. limit: "))
 correct_answer = random.randint(a, b)
 
 # to know which number was generated from the random function
@@ -18,11 +18,11 @@ while  guesses_remaining > 0:
  
     while True:
         try:
-            guess = int(input("\nGuess a number between 1 and {}: ".format(b)))
+            guess = int(input("\nGuess a number between {} and {}: ".format(a, b)))
             if a <= guess <= b:
                 break     #Exit 'while True' loop
             else:
-                print("Your guess was NOT a number between 1 and {}.  Try again.".format(b))
+                print("Your guess was NOT a number between {} and {}.  Try again.".format(a, b))
         except:
             print("Your guess was NOT an Integer.  Try again.")
      
